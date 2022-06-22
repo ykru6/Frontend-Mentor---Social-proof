@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+}
+html:focus-within {
+    scroll-behavior: smooth;
+}
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+a:not([class]) {
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    :after,
+    :before {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin-top: 0;
+}
+a,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+html {
+    box-sizing: border-box;
+    font-size: 0.9375rem;
+}
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+body {
+    font-family: League Spartan;
+    font-weight: 400;
+    margin: 0;
+    padding: 4rem 1.5rem;
+}
+.content {
+    display: grid;
+    grid-template-areas: "header" "rating" "review" "footer";
+    margin: 0 auto;
+    max-width: 69.375rem;
+}
+@media (min-width: 61.25em) {
+    .content {
+        grid-template-areas: "header rating" "review review" "footer footer";
+        grid-template-columns: 40% 1fr;
+    }
+}
+.footer {
+    grid-area: footer;
+}
+@media (min-width: 61.25em) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.25rem;
+    }
+}
+.header {
+    grid-area: header;
+    text-align: center;
+}
+.header .header__title {
+    color: #502050;
+    font-size: 2.5rem;
+    line-height: 0.8;
+    margin: 0 1.375rem;
+}
+.header .header__subs {
+    font-size: 1.2rem;
+    margin-top: 1.375rem;
+}
+.rt-container__ratings {
+    grid-area: rating;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.rv__container {
+    grid-area: review;
+    margin-top: 2.75rem;
+    text-align: left;
+}
+@media (min-width: 61.25em) {
+    .header {
+        padding-block: 1.5rem;
+        text-align: left;
+    }
+    .header .header__title {
+        font-size: 3.5rem;
+        margin-block: 1.25rem;
+        margin-inline: 0;
+    }
+    .header .header__subs {
+        margin-block: 1.75rem;
+    }
+}
+.rv__container {
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+}
+.rv__container .container__reviews {
+    background-color: #502050;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+    padding-inline: 2rem;
+    padding-top: 2.5rem;
+}
+.rv__container .container__reviews .reviews__profile {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1.75rem;
+    vertical-align: middle;
+}
+.rv__container .container__reviews .reviews__profile .profile__user {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.rv__container .container__reviews .reviews__profile .profile__info {
+    margin-block: 1px;
+    margin-left: 1.5rem;
+}
+.rv__container .container__reviews .reviews__profile .profile__info .info__username {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+.rv__container .container__reviews .reviews__profile .profile__info .info__status {
+    color: #ee68a4;
+}
+@media (min-width: 40em) {
+    .rv__container {
+        flex-flow: row wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-block: 1.5rem;
+        padding: 0;
+    }
+    .rv__container .container__reviews {
+        flex: 1 1 auto;
+        max-width: 21.875rem;
+    }
+}
+@media (min-width: 61.25em) {
+    .rv__container {
+        flex-flow: row nowrap;
+        margin: 0;
+    }
+    .rv__container .container__reviews:first-child {
+        -webkit-transform: translateY(-1rem);
+        transform: translateY(-1rem);
+    }
+    .rv__container .container__reviews:nth-child(3) {
+        -webkit-transform: translateY(1rem);
+        transform: translateY(1rem);
+    }
+}
+.rt-container__ratings {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    padding: 0;
+}
+.rt-container__ratings .rating {
+    background-color: #f7f2f7;
+    border-radius: 10px;
+    padding: 0.9rem;
+}
+.rt-container__ratings .rating .rating__stars {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+.rt-container__ratings .rating .rating__stars .star__img {
+    max-width: 100%;
+}
+.rt-container__ratings .rating .rating__heading {
+    color: #502050;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+@media (min-width: 40em) {
+    .rt-container__ratings {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .rt-container__ratings .rating {
+        flex: 1 1 auto;
+        max-width: 25rem;
+    }
+}
+@media (min-width: 61.25em) {
+    .rt-container__ratings {
+        -webkit-margin-start: auto;
+        flex-flow: column nowrap;
+        margin-block: auto;
+        margin-inline-start: auto;
+    }
+    .rt-container__ratings .rating {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        max-width: none;
+    }
+    .rt-container__ratings .rating .rating__stars {
+        margin-bottom: 0;
+        margin-inline: 1.5rem;
+    }
+    .rating__heading {
+        margin-inline: 1.5rem;
+    }
+    .rating__heading:nth-child(2) {
+        margin-right: 1.25rem;
+    }
+    .rt-container__ratings .rating:first-of-type {
+        -webkit-transform: translateX(-4.5rem);
+        transform: translateX(-4.5rem);
+    }
+    .rt-container__ratings .rating:nth-of-type(2) {
+        -webkit-transform: translateX(-2.5rem);
+        transform: translateX(-2.5rem);
+    }
+}
+.footer__attribution {
+    font-size: 1rem;
+    text-align: center;
+}
+.footer__attribution a {
+    color: #3e52a3;
+}
+@media (max-width: 39.9375em) {
+    .footer__attribution {
+        display: none;
+    }
+}
+/*# sourceMappingURL=style.css.map */

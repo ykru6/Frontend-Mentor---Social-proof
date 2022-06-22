@@ -1,0 +1,64 @@
+@use '../util' as *;
+@use '../globals/colors.scss' as clr;
+
+.header {
+    text-align: center;
+
+    grid-area: header;
+
+    .header__title {
+	    font-size: 2.5rem;
+
+        color: clr(primary, darkest-magenta);
+
+        margin: 0 rem(22);
+
+        line-height: 0.8;
+    }
+
+    .header__subs {
+        font-size: rem(19.2);
+
+        color: clr(primary, dark-grayish-magenta);
+
+        margin-top: rem(22);
+    }
+}
+
+.rt-container__ratings {
+    text-align: center;
+
+    margin-top: rem(24);
+
+    grid-area: rating;
+}
+
+.rv__container {
+    text-align: left;
+
+    margin-top: rem(44);
+
+    grid-area: review;
+}
+
+@include breakpoint(large) {
+    .header {
+        text-align: left;
+
+        padding-block: 1.5rem;
+
+        .header__title {
+            font-size: 3.5rem;
+
+            margin-block: 1.25rem;
+            margin-inline: 0;
+
+        }
+
+        .header__subs {
+            margin-block: 1.75rem;
+        }
+    }
+
+}
+

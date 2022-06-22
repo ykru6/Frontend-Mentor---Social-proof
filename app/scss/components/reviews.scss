@@ -1,0 +1,87 @@
+@use '../util' as *;
+@use '../base/' as *;
+@use '../globals/colors.scss' as clr;
+
+.rv__container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+
+    color: clr(neutral, white);
+
+    .container__reviews {
+        background-color: clr(primary, darkest-magenta);
+        border-radius: 10px;
+
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        padding-inline: 2rem;
+
+        .reviews__profile {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            vertical-align: middle;
+            
+            margin-bottom: 1.75rem;
+
+            .profile__user {
+                border-radius: 50%;
+
+                width: 40px;
+                height: 40px;
+            }
+
+            .profile__info {
+                margin-left: 1.5rem;
+                margin-block: 1px;
+
+                .info__username {
+                    font-size: 1rem;
+
+                    font-weight: $f-bold;
+
+                    margin: 0;
+                }
+
+                .info__status {
+                    color: clr(primary, soft-pink);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(medium) {
+    .rv__container {
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1rem;
+        
+        margin-block: 1.5rem;
+        padding: 0;
+
+        .container__reviews {
+            flex: 1 1 auto;
+
+            max-width: rem(350);
+        }
+    }
+}
+
+@include breakpoint(large) {
+    .rv__container {
+        flex-flow: row nowrap;
+
+        margin: 0;
+
+        .container__reviews:nth-child(1) {
+            transform: translateY(-1rem);
+        }
+
+        .container__reviews:nth-child(3) {
+            transform: translateY(1rem);
+        }
+    }
+}
